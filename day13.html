@@ -1,0 +1,336 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Google | Home-Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 0 12px;
+  }
+  nav {
+    gap: 15px;
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  nav img {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  nav img:hover {
+    border-radius: 50%;
+    background-color: #e4e6e9;
+    cursor: pointer;
+  }
+  .sign-in {
+    color: white;
+    background-color: #0e4dac;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .lab {
+    font-size: 12px;
+  }
+  .icon-lab {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .lab-hover {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .icon-lab:hover .lab-hover {
+    visibility: visible;
+    opacity: 1;
+  }
+  .icon-app{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .app-hover{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;  
+  }
+  .icon-app:hover .app-hover{
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  .app {
+    font-size: 12px;
+  }
+  .google-logo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 40vh;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 20px;
+  }
+  .mic {
+    position: relative;
+    left: 630px;
+  }
+  .cam {
+    position: relative;
+    left: 650px;
+  }
+  .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.mic-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mic-hover {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  margin-left: 550px;
+  margin-top: 100px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.mic-wrapper:hover .mic-hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+  .search input {
+    padding-left: 30px;
+    line-height: 40px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(187, 184, 184);
+    text-align: left;
+    width: 650px;
+    font-size: 17px;
+    height: 9vh;
+    background-color: #ffffff;
+  }
+  .search input:hover {
+    box-shadow: 5px 5px 10px rgb(212, 212, 212),
+      -2px -2px 6px rgb(216, 214, 214);
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 33px;
+  }
+  .btn button {
+    background-color: #eff0f1;
+    border: none;
+    line-height: 35px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
+  .btn button:hover {
+    box-shadow: 1px 1px 3px gray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .lang {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 50px;
+    font-size: 14px;
+  }
+  .lang a {
+    padding-top: 13px;
+    text-decoration: none;
+  }
+  .lang a:hover {
+    text-decoration: underline;
+  }
+  .pak {
+    background-color: rgb(226, 224, 224);
+    padding: 5px;
+  }
+  .pak p {
+    padding-left: 25px;
+  }
+  footer {
+    background-color: rgb(226, 224, 224);
+    padding: 12px;
+    border-top: 1px solid rgb(173, 173, 173);
+    display: flex;
+    gap: 590px;
+  }
+  footer a {
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  footer .left {
+    padding: 12px;
+    font-size: 16px;
+  }
+  footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+</style>
+<div class="main">
+  <nav>
+    <a href="https://mail.google.com/mail/&amp;ogbl">Gmail</a>
+    <a href="https://www.google.com/imghp?hl=en&amp;ogbl">Images</a>
+
+    <div class="icon-lab">
+      <img src="https://placehold.co/16x16" />
+      <span class="lab-hover">Google Lab</span>
+    </div>
+
+    <div class="icon-app">
+      <img src="https://placehold.co/16x16" alt="Apps" />
+      <span class="app-hover">Google Apps</span>
+
+    </div>
+
+    <button class="sign-in">Sign In</button>
+  </nav>
+  <div class="google-logo">
+    <img src="https://placehold.co/272x92?text=Google"/>
+  </div>
+
+<div class="search">
+  <div class="mic-wrapper">
+    <img src="https://placehold.co/16x16" alt="mic" class="mic" />
+    <span class="mic-hover">Search by voice</span>
+  </div>
+  
+  <div class="mic-wrapper">
+    <img src="https://placehold.co/16x16" alt="mic" class="mic" />
+    <span class="mic-hover">Search by image</span>
+  </div>
+
+  <input type="search" placeholder="Search Google or Type a URL" />
+</div>
+
+  <div class="btn">
+    <div class="btn1">
+      <button>Google Search</button>
+    </div>
+    <div class="btn2">
+      <button>I'm Feeling Lucky</button>
+    </div>
+  </div>
+  <div class="lang">
+    <p>Google offered in:</p>
+    <a
+      href="https://www.google.com/setprefs?sig=0_nHi-KmlvtlcUcSwrCUdXCcpCdwQ%3D&amp;hl=ur&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjdkdT97M2OAxUFBfsDHSG8MbsQ2ZgBCCI"
+      >Urdu</a
+    >
+    <a
+      href="https://www.google.com/setprefs?sig=0_nHi-KmlvtlcUcSwrCUdXCcpCdwQ%3D&amp;hl=ps&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjdkdT97M2OAxUFBfsDHSG8MbsQ2ZgBCCM"
+      >Pashto</a
+    >
+    <a
+      href="https://www.google.com/setprefs?sig=0_nHi-KmlvtlcUcSwrCUdXCcpCdwQ%3D&amp;hl=sd&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwjdkdT97M2OAxUFBfsDHSG8MbsQ2ZgBCCQ"
+      >Sindhi</a
+    >
+  </div>
+  <div class="pak">
+    <p>Pakistan</p>
+  </div>
+  <footer>
+    <div class="left">
+      <a
+        href="https://about.google/?utm_source=google-PK&amp;utm_medium=referral&amp;utm_campaign=hp-footer&amp;fg=1"
+        target="_blank"
+        >About</a
+      >
+      <a
+        href="https://www.google.com/intl/en_pk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1"
+        target="_blank"
+        >Advertising</a
+      >
+      <a
+        href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1"
+        target="_blank"
+        >Business</a
+      >
+      <a href="https://google.com/search/howsearchworks/?fg=1" target="_blank"
+        >How Search works</a
+      >
+    </div>
+    <div class="right">
+      <a
+        href="https://policies.google.com/privacy?hl=en-PK&amp;fg=1"
+        target="_blank"
+        >Privacy</a
+      >
+      <a
+        href="https://policies.google.com/terms?hl=en-PK&amp;fg=1"
+        target="_blank"
+        >Terms</a
+      >
+      <a href="">Settings</a>
+    </div>
+  </footer>
+</div>
